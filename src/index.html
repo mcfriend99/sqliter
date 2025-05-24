@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQLiteR</title>
+  <link rel="stylesheet" href="./assets/css/tree.css">
+  <link rel="stylesheet" href="./assets/css/codemirror.css">
+  <link rel="stylesheet" href="./assets/css/tabby.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header oncontextmenu="return false">
+    <ul>
+      <li><a>File</a></li>
+      <li><a>Edit</a></li>
+      <li><a>View</a></li>
+      <li><a>Insert</a></li>
+      <li><a>Help</a></li>
+    </ul>
+  </header>
+
+  <section class="toolbar" oncontextmenu="return false">
+    <div class="toolset logo">
+      <img src="./assets/svg/sqliter.svg">
+      <span>SQLiteR</span>
+    </div>
+    <nav class="toolset actions">
+      <div class="action-group">
+        <a title="Open New Database" id="new-database">
+          <img src="./assets/svg/new-database.svg">
+        </a>
+        <a title="Open SQL File" id="open-sql">
+          <img src="./assets/svg/open-file.svg">
+        </a>
+        <a title="New Query" id="new-query-btn">
+          <img src="./assets/svg/new-query.svg">
+        </a>
+        <a title="Save Query">
+          <img src="./assets/svg/save.svg">
+        </a>
+      </div>
+      <div class="action-group">
+        <a title="Undo" id="undo-btn" disabled>
+          <img src="./assets/svg/undo.svg">
+        </a>
+        <a title="Redo" id="redo-btn" disabled>
+          <img src="./assets/svg/redo.svg">
+        </a>
+        <a title="Comment Out">
+          <img src="./assets/svg/comment.svg">
+        </a>
+        <a title="Uncomment">
+          <img src="./assets/svg/uncomment.svg">
+        </a>
+      </div>
+      <div class="action-group">
+        <a title="Zoom In">
+          <img src="./assets/svg/zoom-in.svg">
+        </a>
+        <a title="Zoom Out">
+          <img src="./assets/svg/zoom-out.svg">
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <main>
+    <section class="sidebar">
+      <legend>Tables</legend>
+      <div id="table-list"></div>
+    </section>
+
+    <section class="content">
+      <ul data-tabs></ul>
+
+      <section class="pages">
+        <div id="tab-template">
+          <section class="editor">
+            <div class="code-editor"></div>
+          </section>
+          <section class="query-actions">
+            <button class="primary query-btn">Run Query</button>
+            <button><img src="./assets/svg/variables.svg" width="16px"> <span>Variables</span></button>
+            <button><img src="./assets/svg/save-2.svg" width="16px"> <span>Save Query</span></button>
+          </section>
+          <section class="results"></section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./assets/js/ag-grid.js"></script>
+  <script src="./assets/js/tree.js"></script>
+  <script src="./assets/js/codemirror.js"></script>
+  <script src="./assets/js/tabby.js"></script>
+  <script src="./assets/js/main.js" defer></script>
+</body>
+
+</html>

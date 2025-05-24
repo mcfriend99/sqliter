@@ -1,0 +1,268 @@
+:root {
+  --border-color: rgba(0, 0, 0, .1);
+  --primary-color: #2b93ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding-top: .25rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: left;
+  padding: .65rem;
+  cursor: default;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+}
+
+header ul li {
+  margin: 0 .05rem;
+}
+
+header ul a {
+  padding: .15rem .6rem;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  gap: .25rem;
+  padding: .5rem .25rem;
+  align-items: center;
+  cursor: default;
+}
+
+.toolbar .toolset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.toolbar .toolset:not(:last-child) {
+  border-right: 1px solid var(--border-color);
+}
+
+.toolset img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+.toolset.actions {
+  flex: 1;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.actions a {
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  padding: 2px;
+}
+
+.actions .action-group {
+  display: inline-flex;
+  gap: .5rem;
+}
+
+.actions .action-group:not(:first-child) {
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.action-group a[disabled] {
+  opacity: 0.25;
+}
+
+.logo {
+  gap: .5rem;
+  font-weight: 400;
+}
+
+.logo span {
+  cursor: default;
+  appearance: none;
+  user-select: none;
+}
+
+.logo img::selection,
+.logo span::selection,
+.actions a::selection,
+.actions img::selection,
+.toolbar::selection,
+.toolbar img::selection,
+header::selection,
+header a::selection {
+  background-color: transparent;
+}
+
+header ul a:not([disabled]):hover,
+.actions a:not([disabled]):hover {
+  background-color: #f5f5f5;
+  border-radius: .25rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--border-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.editor {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.results {
+  flex: 1;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar legend {
+  padding: .25rem .75rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.fade {
+  color: #999;
+  font-size: 90%;
+}
+
+.pages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ag-root-wrapper {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+#table-list {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#table-list li {
+  padding: .25rem .5rem;
+  cursor: pointer;
+}
+
+.code-editor {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.CodeMirror {
+  width: 100%;
+  height: 100%;
+}
+
+#tab-template {
+  display: none;
+}
+
+.query-actions {
+    padding: .5rem 1rem;
+    border-top: 1px solid var(--border-color);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+}
+
+button {
+  padding: .5rem 1rem;
+  border-radius: .45rem;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  /* font-weight: 600; */
+  background: transparent;
+  color: initial;
+  box-shadow: 0 1px 4px transparent;
+  align-items: center;
+  display: inline-flex;
+  gap: .5rem;
+}
+
+button:not([disabled]):hover {
+  border-color: #d8d8d8;
+  box-shadow: 0 2px 1px #f0f0f0;
+}
+
+button.primary,
+button.primary:hover {
+  border-color: var(--border-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+button.primary:not([disabled]):hover {
+  box-shadow: 0 2px 1px rgba(20, 127, 215, 0.59);
+}
+
+button[disabled] {
+  opacity: .35;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sqliter", 
+  "version": "1.0.0", 
+  "description": "", 
+  "homepage": "", 
+  "tags": [
+    ""
+  ], 
+  "author": "", 
+  "license": "ISC", 
+  "sources": [
+    "https://nyssa.bladelang.org"
+  ], 
+  "deps": {
+    "razor": "1.0.0"
+  }
+}
