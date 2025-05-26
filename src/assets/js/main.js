@@ -179,8 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = editor.getValue()
         try {
           const result = await runQuery(content)
+          // console.log(result)
 
-          console.log(result)
           if (result && result.data && result.data.length > 0) {
             setColumns(result.fields.map(field => ({ field, headerName: field })))
             setData(result.data)

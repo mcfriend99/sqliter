@@ -1,6 +1,6 @@
 # SQLiteR
 
-SQLiteR is a GUI for working with SQLite databases. You can open databases, load schema, run queries etc.
+SQLiteR is a GUI for working with SQLite databases for MacOS. You can open databases, load schema, run queries etc.
 
 ### Roadmap
 
